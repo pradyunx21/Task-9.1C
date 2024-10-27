@@ -1,0 +1,122 @@
+/* General container styling for the home page */
+.home-container {
+  font-family: 'Roboto', sans-serif; /* Updated font for a modern look */
+  background-color: #eef2f7;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #354259; /* Darker color for a more defined look */
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Darker shadow for better contrast */
+  z-index: 10;
+}
+
+/* Task@Deakin logo on the left side */
+header h1 {
+  color: #ffffff; /* White color for better contrast */
+  font-size: 28px; /* Increased size */
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 2px; /* Added letter spacing for modern look */
+}
+
+/* Centered search bar */
+.search-bar {
+  padding: 10px;
+  width: 40%;
+  max-width: 500px;
+  font-size: 16px;
+  border-radius: 30px; /* Rounded search bar */
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #007bff; /* Accent color on focus */
+}
+
+/* Right-side button container */
+.button-container {
+  display: flex;
+  gap: 15px; /* Increased spacing between buttons */
+}
+
+/* Post and login button styles */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px; /* Rounded buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.post-button {
+  background-color: #5b9cfa; /* Softer color */
+  color: white;
+}
+
+.login-button {
+  background-color: #4169e1; /* Royal blue for login button */
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.05); /* Subtle scale effect on hover */
+  background-color: #2e49cc; /* Darker shade on hover */
+}
+
+button:active {
+  transform: scale(0.98); /* Slightly shrink when clicked */
+}
+
+/* Make header contrast with background */
+header {
+  background-color: #2e3a4e; /* Darker header background */
+  color: #ffffff;
+  border-bottom: 2px solid #007bff; /* Accent color for better contrast */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 50%;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    padding: 10px 40px; /* Smaller padding for mobile */
+  }
+}
+
+/* Extra responsiveness for small screens */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .search-bar {
+    width: 70%;
+  }
+
+  button {
+    width: 100px;
+  }
+}
